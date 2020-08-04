@@ -1,0 +1,7 @@
+
+ssh just1689@192.168.88.71 'docker image prune -af'
+ssh just1689@192.168.88.72 'docker image prune -af'
+ssh just1689@192.168.88.73 'docker image prune -af'
+ssh just1689@192.168.88.74 'docker image prune -af'
+ssh just1689@192.168.88.75 'docker image prune -af'
+

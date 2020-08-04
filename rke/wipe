@@ -1,3 +1,5 @@
+rke remove
+
 ssh just1689@192.168.88.71 'docker stop $(docker ps -a -q)'
 ssh just1689@192.168.88.72 'docker stop $(docker ps -a -q)'
 ssh just1689@192.168.88.73 'docker stop $(docker ps -a -q)'
