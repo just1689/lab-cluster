@@ -1,0 +1,9 @@
+#
+# Edit the 00-config... file to change Loki settings and then run
+# ./generate
+#
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: loki
