@@ -418,7 +418,8 @@ spec:
           configMap:
             name: monitoring-grafana
         - name: storage
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: grafana
         - name: sc-datasources-volume
           emptyDir: {}
 ---
