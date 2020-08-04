@@ -1,0 +1,3 @@
+#
+# helm template monitoring -f 02-values.yaml.txt --namespace monitoring stable/grafana > 03-stack.yaml
+#
