@@ -1,0 +1,13 @@
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: grafana
+  namespace: monitoring
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /grafana
+            backend:
+              serviceName: monitoring-grafana
+              servicePort: 80

@@ -155,6 +155,11 @@ data:
     logs = /var/log/grafana
     plugins = /var/lib/grafana/plugins
     provisioning = /etc/grafana/provisioning
+    [server]
+    domain = cluster.domain.com
+    root_url = %(protocol)s://%(domain)s/grafana/
+    serve_from_sub_path = true
+    enforce_domain = false
 ---
 # Source: grafana/templates/tests/test-configmap.yaml
 apiVersion: v1
@@ -346,7 +351,6 @@ spec:
         checksum/sc-dashboard-provider-config: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
         checksum/secret: be2cda3e9e3b646b1d76e1243e24a843e0b86d245d7d4f8e016f985f9db46da9
     spec:
-      
       serviceAccountName: monitoring-grafana
       securityContext:
         fsGroup: 472
