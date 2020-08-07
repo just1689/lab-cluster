@@ -14,6 +14,17 @@ I've removed the Secret and moving it to secret.yaml and remove the last line. S
 
 ## Changing the Loki config
 
+The file `00-config-for-secret.yaml.txt` is the plain text version of what becomes `02-secret.yaml`. 
+Once you modify the file `00-config-for-secret.yaml.txt` run the following command: 
+
 ```shell
 sed -i '$ d' 02-secret.yaml && echo "  loki.yaml: $( cat 00-config-for-secret.yaml.txt | base64 -w 0 )" >> 02-secret.yaml
+```
+
+
+## Using Loki 
+Install by running the following command in this directory
+
+```shell
+kubectl apply -f .
 ```
