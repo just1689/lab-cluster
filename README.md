@@ -6,14 +6,20 @@ My home lab cluster.
 
 ### VM setup
 
-- Setup n VMs / bare metal machines with Ubuntu 18.04
-- Install docker on each VM. `wget -O - https://raw.githubusercontent.com/just1689/kubernetes-setup-rke/master/setup-node.sh | bash`
+- Setup n VMs / bare metal machines with Ubuntu 18.04. The K8s control plan + etcd nodes should have 1.5 GB memory. I've given the worker nodes 8 GB memory.
+- Install docker on each VM. 
+```shell 
+wget -O - https://raw.githubusercontent.com/just1689/kubernetes-setup-rke/master/setup-node.sh | bash
+```
 - Create a user on each VM.
-- Allow your new user to run `docker x` commands.
+- Allow your new user to run `docker x` commands 
+```shell
+sudo usermod -aG docker $USER
+```
 - Generate ssh keys with `ssh-key-gen`
 - Copy your key over to each vm with `ssh-copy-id user@address`
 - Turn swap off on each VM by running `sudo swapoff -a`
-- To allow for cleaning up as root, setup cert base ssh access to root to each VM.
+- To allow for cleaning up as root, setup cert base ssh access to root to each VM. You may not need this. It's only for recovering from unsupported upgrade paths etc. 
 
 ### Installing Kubernetes
 
