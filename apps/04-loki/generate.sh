@@ -1,1 +1,0 @@
-echo "  loki.yaml: $( cat 00-config-for-secret.yaml.txt | base64 -w 0 )" >> 01-secret.yaml
