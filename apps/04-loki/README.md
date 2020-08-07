@@ -1,6 +1,13 @@
 # Creating
 
-## Generating
+## Installing Loki 
+Install by running the following command in this directory
+
+```shell
+kubectl apply -f .
+```
+
+## Original Source
 
 This was created using the following commands
 
@@ -22,9 +29,3 @@ sed -i '$ d' 02-secret.yaml && echo "  loki.yaml: $( cat 00-config-for-secret.ya
 ```
 
 
-## Using Loki 
-Install by running the following command in this directory
-
-```shell
-kubectl apply -f .
-```

@@ -1,7 +1,7 @@
 # Longhorn
 
 
-## Using Longhorn 
+## Installing Longhorn 
 Install by running the following command in this directory
 
 ```shell
