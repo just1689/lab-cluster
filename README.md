@@ -12,7 +12,7 @@ My home lab cluster.
 wget -O - https://raw.githubusercontent.com/just1689/kubernetes-setup-rke/master/setup-node.sh | bash
 ```
 - Create a user on each VM.
-- Allow your new user to run `docker x` commands 
+- Allow your new user to run `docker x` commands.
 ```shell
 sudo usermod -aG docker $USER
 ```
@@ -59,6 +59,19 @@ Loki
 ```shell
 kubectl apply -f apps/04-loki/ 
 ```
+
+### Lens
+
+Lens can show you the cluster health of the nodes.
+
+<img src="docs/cluster.png" />
+
+Lens can also show the health of your workloads. You can watch this space to see the  various lab apps come up.
+
+<img src="docs/workloads.png" />
+
+
+
 
 
 
