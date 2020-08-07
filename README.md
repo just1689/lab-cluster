@@ -71,7 +71,13 @@ Lens can also show the health of your workloads. You can watch this space to see
 <img src="docs/workloads.png" />
 
 
+### Issues
 
+SCSI
+
+```shell
+sudo apt install open-iscsi -y
+```
 
 
 
